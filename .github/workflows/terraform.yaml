@@ -8,7 +8,6 @@ on:
   push:
     branches:
       - main
-      - develop
   pull_request:
     branches:
       - main
@@ -36,9 +35,9 @@ jobs:
         with:
           submodules: true
 
-      - name: Read Terraform Version from Files
-        id: tfver
-        run: echo "version=$(cat .terraform-version)" >> $GITHUB_OUTPUT
+      #- name: Read Terraform Version from Files
+      #  id: tfver
+      #  run: echo "version=$(cat .terraform-version)" >> $GITHUB_OUTPUT
 
       - name: Setup Terraform using tfenv
         uses: tofuutils/tenv-github-action@main
