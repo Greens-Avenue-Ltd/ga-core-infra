@@ -39,8 +39,8 @@ variable "tags" {
   type        = map(string)
   default = {
     Owner       = "brian.donnelly@greensavenue.co.uk"
-    Environment = var.shared_environment
-    Project     = var.project_name
+    Environment = "non-prod"
+    Project     = "ga-core-infra"
     asset_code  = "GA-COIN"
   }
 }
